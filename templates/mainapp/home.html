@@ -1,5 +1,23 @@
 {% extends "mainapp/base.html" %}
 
 {% block content %}
-    <a href="/test-speed/"><button>Test speed!</button></a>
+    <div class="container">
+        <div class="welcome-block">
+            <div class="row">
+                <div class="col">
+                    <div class="text-col">
+                        <h3>test your internet speed with</h3>
+                        <p><b>Speedster</b></p>
+                        <h3>best internet speed tester</h3>
+                        <a href="/test-speed/"><button class="btn btn-outline-warning"><b>Test connection speed!</b></button></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="logo-col">
+                        <image src="../../static/images/speed-main.png"></image>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

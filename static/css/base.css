@@ -1,0 +1,32 @@
+body {
+    font-family: "Monaco", monospace;
+    background: Teal;
+}
+
+.welcome-block {
+    height: 100vh;
+}
+
+.text-col {
+    text-align: center;
+    font-size: 120px;
+    margin-top: 16%;
+}
+
+.logo-col {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.text-col button {
+    font-size: 25px;
+}
+
+footer{
+    height: 14vh;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin-top: 100px;
+}

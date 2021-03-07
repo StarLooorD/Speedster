@@ -1,0 +1,24 @@
+.test-block img {
+    height: 50px;
+    margin: 30px;
+}
+
+.title {
+    margin: 40px;
+    text-align: center;
+}
+
+.button-area{
+    text-align: center;
+}
+
+.test-block {
+    height: 100vh;
+    font-size: 32px;
+}
+
+.test-block button {
+    margin: 20px;
+    width: 50%;
+    font-size: 25px;
+}

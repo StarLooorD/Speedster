@@ -1,7 +1,27 @@
 {% extends "mainapp/base.html" %}
 
 {% block content %}
-    <h2>Ping: {{ ping }} ms</h2>
-    <h2>Download speed: {{ download_speed }} Mbit/s</h2>
-    <h2>Upload speed: {{ upload_speed }} Mbit/s</h2>
+    <div class="container">
+        <div class="test-block">
+            <div class="title">
+                <p><b>Done, check the results:</b></p>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p><image src="../../static/images/ping-icon.png"></image><b>Ping: {{ ping }} ms</b></p>
+                    <p><image src="../../static/images/download-icon.png"></image><b>Download speed: {{ download_speed }} Mbit/s</b></p>
+                    <p><image src="../../static/images/upload-icon.png"></image><b>Upload speed: {{ upload_speed }} Mbit/s</b></p>
+                </div>
+                <div class="col">
+                    <p><image src="../../static/images/country-icon.png"></image><b>Country: {{ country }} </b></p>
+                    <p><image src="../../static/images/ip-icon.png"></image><b>IP-Address: {{ ip_address }} </b></p>
+                    <p><image src="../../static/images/provider-icon.png"></image><b>Provider: {{ provider }} </b></p>
+                </div>
+            </div>
+            <div class="button-area">
+                <a href="/test-speed/"><button class="btn btn-outline-warning"><b>Test again!</b></button></a>
+                <a href="/home/"><button class="btn btn-outline-dark"><b>Back</b></button></a>
+            </div>
+        </div>
+    </div>
 {% endblock %}
