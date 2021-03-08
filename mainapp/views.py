@@ -1,10 +1,9 @@
 import speedtest
 
 from django.shortcuts import render, redirect
-from django.http.response import HttpResponse
 
 
-def redirect_home(reqest):
+def redirect_home(request):
     return redirect('home_page')
 
 
@@ -12,7 +11,7 @@ def home_page(request):
     return render(request, 'mainapp/home.html')
 
 
-def test_speed(request):
+def collect_speed_data():
     st = speedtest.Speedtest()
     speed_data = {
         'download_speed': "{:.2f}".format(st.download() / 10 ** 6),
@@ -22,12 +21,9 @@ def test_speed(request):
         'ip_address': st.results.client['ip'],
         'provider': st.results.client['isp'],
     }
-    # speed_data = {
-    #     'download_speed': 100.00,
-    #     'upload_speed': 100.00,
-    #     'ping': 10.00,
-    #     'country': st.results.client['country'],
-    #     'ip_address': st.results.client['ip'],
-    #     'provider': st.results.client['isp'],
-    # }
+    return speed_data
+
+
+def do_test(request):
+    speed_data = collect_speed_data()
     return render(request, 'mainapp/test.html', speed_data)
